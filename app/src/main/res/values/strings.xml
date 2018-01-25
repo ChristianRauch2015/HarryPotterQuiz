@@ -22,4 +22,5 @@
     <string name="answer_q3_crucio">Crucio</string>
     <string name="answer_q4_mcgonagall">McGonagall</string>
     <string name="answer_q4_snape">Snape</string>
+    <string name="result">%1$s, you scored well on %2$d out of %3$d questions. %4$s</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.android.harrypotterquiz;
 
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -123,14 +124,15 @@ public class MainActivity extends AppCompatActivity {
      */
     private String createOutputText(String name, int num_correct, int num_total,
                                     boolean isWellDone) {
-        String resultMessage = name;
-        resultMessage += ", you scored well on " + num_correct + " out of ";
-        resultMessage += num_total + " questions\n";
+        String message;
+        Resources res = getResources();
         if (isWellDone) {
-            resultMessage += "Well done!";
+            message = "Well done!";
         } else {
-            resultMessage += "Keep trying!";
+            message = "Keep trying!";
         }
+        String resultMessage = res.getString(R.string.result, name, num_correct, num_total,
+                message);
         return resultMessage;
     }
 
