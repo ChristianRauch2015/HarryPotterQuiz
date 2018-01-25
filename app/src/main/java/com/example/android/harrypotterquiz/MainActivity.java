@@ -71,10 +71,6 @@ public class MainActivity extends AppCompatActivity {
      * @return whether question was anwered correctly
      */
     private boolean checkQuestion1() {
-        checkBox_q1_henry_.findViewById(R.id.checkBox_q1_henry);
-        checkBox_q1_james_.findViewById(R.id.checkBox_q1_james);
-        checkBox_q1_lily_.findViewById(R.id.checkBox_q1_lily);
-        checkBox_q1_elizabeth_.findViewById(R.id.checkBox_q1_elizabeth);
         if (checkBox_q1_elizabeth_.isChecked() || checkBox_q1_henry_.isChecked()) {
             return false;
         }
@@ -88,9 +84,6 @@ public class MainActivity extends AppCompatActivity {
      */
     private boolean checkQuestion2() {
         String answer_q2 = editText_q2_.getText().toString();
-        EditText editText_q2 = new EditText(this);
-        editText_q2.findViewById(R.id.editText_q2);
-
         return answer_q2.equalsIgnoreCase("muggle");
     }
 
