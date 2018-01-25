@@ -10,55 +10,44 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText editText_userName_;
-    CheckBox checkBox_q1_henry_;
-    CheckBox checkBox_q1_james_;
-    CheckBox checkBox_q1_lily_;
-    CheckBox checkBox_q1_elizabeth_;
-    EditText editText_q2_;
-    CheckBox checkBox_q3_incendio_;
-    CheckBox checkBox_q3_avadakedavra_;
-    CheckBox checkBox_q3_imperio_;
-    CheckBox checkBox_q3_crucio_;
-    RadioButton radio_button_q4_mcgonagall_;
-    RadioButton radio_button_q4_snape_;
+   private EditText editText_userName_;
+   private CheckBox checkBox_q1_henry_;
+   private CheckBox checkBox_q1_james_;
+   private CheckBox checkBox_q1_lily_;
+   private CheckBox checkBox_q1_elizabeth_;
+   private EditText editText_q2_;
+   private CheckBox checkBox_q3_incendio_;
+   private CheckBox checkBox_q3_avadakedavra_;
+   private CheckBox checkBox_q3_imperio_;
+   private CheckBox checkBox_q3_crucio_;
+   private RadioButton radio_button_q4_mcgonagall_;
+   private RadioButton radio_button_q4_snape_;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        editText_userName_ = new EditText(this);
-        checkBox_q1_henry_ = new CheckBox(this);
-        checkBox_q1_james_ = new CheckBox(this);
-        checkBox_q1_lily_ = new CheckBox(this);
-        checkBox_q1_elizabeth_ = new CheckBox(this);
-        editText_q2_ = new EditText(this);
-        checkBox_q3_incendio_ = new CheckBox(this);
-        checkBox_q3_avadakedavra_ = new CheckBox(this);
-        checkBox_q3_imperio_ = new CheckBox(this);
-        checkBox_q3_crucio_ = new CheckBox(this);
-        radio_button_q4_mcgonagall_ = new RadioButton(this);
-        radio_button_q4_snape_ = new RadioButton(this);
         setContentView(R.layout.activity_main);
-        editText_userName_.findViewById(R.id.editText_username);
-        checkBox_q1_henry_.findViewById(R.id.checkBox_q1_henry);
-        checkBox_q1_james_.findViewById(R.id.checkBox_q1_james);
-        checkBox_q1_lily_.findViewById(R.id.checkBox_q1_lily);
-        checkBox_q1_elizabeth_.findViewById(R.id.checkBox_q1_elizabeth);
-        editText_q2_.findViewById(R.id.editText_q2);
-        checkBox_q3_incendio_.findViewById(R.id.checkBox_q3_incendio);
-        checkBox_q3_avadakedavra_.findViewById(R.id.checkBox_q3_avadakedavra);
-        checkBox_q3_imperio_.findViewById(R.id.checkBox_q3_imperio);
-        checkBox_q3_crucio_.findViewById(R.id.checkBox_q3_crucio);
-        radio_button_q4_mcgonagall_.findViewById(R.id.radio_button_q4_mcgonagall);
-        radio_button_q4_snape_.findViewById(R.id.radio_button_q4_snape);
+        editText_userName_ = findViewById(R.id.editText_username);
+        checkBox_q1_henry_ = findViewById(R.id.checkBox_q1_henry);
+        checkBox_q1_james_ = findViewById(R.id.checkBox_q1_james);
+        checkBox_q1_lily_ = findViewById(R.id.checkBox_q1_lily);
+        checkBox_q1_elizabeth_ = findViewById(R.id.checkBox_q1_elizabeth);
+        editText_q2_ = findViewById(R.id.editText_q2);
+        checkBox_q3_incendio_ = findViewById(R.id.checkBox_q3_incendio);
+        checkBox_q3_avadakedavra_ = findViewById(R.id.checkBox_q3_avadakedavra);
+        checkBox_q3_imperio_ = findViewById(R.id.checkBox_q3_imperio);
+        checkBox_q3_crucio_= findViewById(R.id.checkBox_q3_crucio);
+        radio_button_q4_mcgonagall_ = findViewById(R.id.radio_button_q4_mcgonagall);
+        radio_button_q4_snape_ = findViewById(R.id.radio_button_q4_snape);
     }
 
     /**
      * This method is called when the submit button is clicked.
      */
     public void submit(View view) {
-        EditText editText = findViewById(R.id.editText_username);
-        String name = editText.getText().toString();
+        String name = editText_userName_.getText().toString();
+        if (name.isEmpty())
+            name = "Anonymous";
         int num_questions = 4;
         boolean isWellDone = false;
         int num_correct = 0;
@@ -70,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
             num_correct += 1;
         if (checkQuestion4())
             num_correct += 1;
+        if (num_correct >= 3)
+            isWellDone = true;
         displayMessage(createOutputText(name, num_correct, num_questions,
                 isWellDone));
     }
