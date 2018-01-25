@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Harry Potter Quiz</string>
+    <string name="user_name">Your Name</string>
+    <string name="answer_q2">Your Answer</string>
+    <string name="submit">Submit</string>
+    <string name="header_question1">Question 1</string>
+    <string name="header_question2">Question 2</string>
+    <string name="header_question3">Question 3</string>
+    <string name="header_question4">Question 4</string>
+    <string name="question1">What are the given names of Harry Potter\'s parents?</string>
+    <string name="question2">How is a person called who has no magic powers?</string>
+    <string name="question3">What are the three unforgivable curses?</string>
+    <string name="question4">Which of these Hogwarts professors teaches transfiguration?</string>
+    <string name="answer_q1_henry">Henry</string>
+    <string name="answer_q1_james">James</string>
+    <string name="answer_q1_lily">Lily</string>
+    <string name="answer_q1_elizabeth">Elizabeth</string>
+    <string name="answer_q2_">muggle</string>
+    <string name="answer_q3_incendio">Incendio</string>
+    <string name="answer_q3_avadakedavra">Avada Kedavra</string>
+    <string name="answer_q3_imperio">Imperio</string>
+    <string name="answer_q3_crucio">Crucio</string>
+    <string name="answer_q4_mcgonagall">McGonagall</string>
+    <string name="answer_q4_snape">Snape</string>
+</resources>

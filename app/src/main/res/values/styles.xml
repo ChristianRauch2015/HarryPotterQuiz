@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="textView">
+        <item name="android:layout_marginLeft">@dimen/margin_left</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom</item>
+    </style>
+    <style name="textEdit">
+        <item name="android:layout_marginLeft">@dimen/margin_left</item>
+    </style>
+    <style name="question">
+        <item name="android:layout_marginLeft">@dimen/margin_left</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom</item>
+        <item name="android:layout_marginRight">@dimen/margin_right</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+    <style name="checkbox_left">
+        <item name="android:layout_marginLeft">@dimen/margin_left</item>
+        <item name="android:paddingLeft">@dimen/padding_left</item>
+        <item name="android:paddingRight">@dimen/padding_right</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+    <style name="checkbox_right">
+        <item name="android:layout_marginLeft">@dimen/margin_left</item>
+        <item name="android:paddingLeft">@dimen/padding_left</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+    <style name="line">
+        <item name="android:layout_height">@dimen/view_width</item>
+        <item name="android:background">@color/colorGray</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom</item>
+    </style>
+    <style name="radio_button_left">
+        <item name="android:layout_marginLeft">@dimen/margin_left</item>
+        <item name="android:paddingLeft">@dimen/padding_left</item>
+        <item name="android:paddingRight">@dimen/padding_right</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+</resources>
