@@ -11,58 +11,64 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-   private EditText editText_userName_;
-   private CheckBox checkBox_q1_henry_;
-   private CheckBox checkBox_q1_james_;
-   private CheckBox checkBox_q1_lily_;
-   private CheckBox checkBox_q1_elizabeth_;
-   private EditText editText_q2_;
-   private CheckBox checkBox_q3_incendio_;
-   private CheckBox checkBox_q3_avadakedavra_;
-   private CheckBox checkBox_q3_imperio_;
-   private CheckBox checkBox_q3_crucio_;
-   private RadioButton radio_button_q4_mcgonagall_;
-   private RadioButton radio_button_q4_snape_;
+   private EditText mEditTextUserName;
+   private CheckBox mCheckBoxQ1Henry;
+   private CheckBox mCheckBoxQ1James;
+   private CheckBox mCheckBoxQ1Lily;
+   private CheckBox mCheckBoxQ1Elizabeth;
+   private EditText mEditTextQ2;
+   private CheckBox mCheckBoxQ3Incendio;
+   private CheckBox mCheckBoxQ3Avadakedavra;
+   private CheckBox mCheckBoxQ3Imperio;
+   private CheckBox mCheckBoxQ3Crucio;
+   private RadioButton mRadioButtonQ4Mcgonagall;
+   private RadioButton mRadioButtonQ4Snape;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editText_userName_ = findViewById(R.id.editText_username);
-        checkBox_q1_henry_ = findViewById(R.id.checkBox_q1_henry);
-        checkBox_q1_james_ = findViewById(R.id.checkBox_q1_james);
-        checkBox_q1_lily_ = findViewById(R.id.checkBox_q1_lily);
-        checkBox_q1_elizabeth_ = findViewById(R.id.checkBox_q1_elizabeth);
-        editText_q2_ = findViewById(R.id.editText_q2);
-        checkBox_q3_incendio_ = findViewById(R.id.checkBox_q3_incendio);
-        checkBox_q3_avadakedavra_ = findViewById(R.id.checkBox_q3_avadakedavra);
-        checkBox_q3_imperio_ = findViewById(R.id.checkBox_q3_imperio);
-        checkBox_q3_crucio_= findViewById(R.id.checkBox_q3_crucio);
-        radio_button_q4_mcgonagall_ = findViewById(R.id.radio_button_q4_mcgonagall);
-        radio_button_q4_snape_ = findViewById(R.id.radio_button_q4_snape);
+        mEditTextUserName = findViewById(R.id.edit_username);
+        mCheckBoxQ1Henry = findViewById(R.id.check_q1_henry);
+        mCheckBoxQ1James = findViewById(R.id.check_q1_james);
+        mCheckBoxQ1Lily = findViewById(R.id.check_q1_lily);
+        mCheckBoxQ1Elizabeth = findViewById(R.id.check_q1_elizabeth);
+        mEditTextQ2 = findViewById(R.id.edit_q2);
+        mCheckBoxQ3Incendio = findViewById(R.id.check_q3_incendio);
+        mCheckBoxQ3Avadakedavra = findViewById(R.id.check_q3_avadakedavra);
+        mCheckBoxQ3Imperio = findViewById(R.id.check_q3_imperio);
+        mCheckBoxQ3Crucio= findViewById(R.id.check_q3_crucio);
+        mRadioButtonQ4Mcgonagall = findViewById(R.id.radio_q4_mcgonagall);
+        mRadioButtonQ4Snape = findViewById(R.id.radio_q4_snape);
     }
 
     /**
      * This method is called when the submit button is clicked.
      */
     public void submit(View view) {
-        String name = editText_userName_.getText().toString();
-        if (name.isEmpty())
+        String name = mEditTextUserName.getText().toString();
+        if (name.isEmpty()) {
             name = "Anonymous";
-        int num_questions = 4;
+        }
+        int numQuestions = 4;
         boolean isWellDone = false;
-        int num_correct = 0;
-        if (checkQuestion1())
-            num_correct += 1;
-        if (checkQuestion2())
-            num_correct += 1;
-        if (checkQuestion3())
-            num_correct += 1;
-        if (checkQuestion4())
-            num_correct += 1;
-        if (num_correct >= 3)
+        int numCorrect = 0;
+        if (checkQuestion1()) {
+            numCorrect += 1;
+        }
+        if (checkQuestion2()) {
+            numCorrect += 1;
+        }
+        if (checkQuestion3()) {
+            numCorrect += 1;
+        }
+        if (checkQuestion4()) {
+            numCorrect += 1;
+        }
+        if (numCorrect >= 3) {
             isWellDone = true;
-        displayMessage(createOutputText(name, num_correct, num_questions,
+        }
+        displayMessage(createOutputText(name, numCorrect, numQuestions,
                 isWellDone));
     }
 
@@ -72,10 +78,10 @@ public class MainActivity extends AppCompatActivity {
      * @return whether question was anwered correctly
      */
     private boolean checkQuestion1() {
-        if (checkBox_q1_elizabeth_.isChecked() || checkBox_q1_henry_.isChecked()) {
+        if (mCheckBoxQ1Elizabeth.isChecked() || mCheckBoxQ1Henry.isChecked()) {
             return false;
         }
-        return checkBox_q1_james_.isChecked() && checkBox_q1_lily_.isChecked();
+        return mCheckBoxQ1James.isChecked() && mCheckBoxQ1Lily.isChecked();
     }
 
     /**
@@ -84,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
      * @return whether question was anwered correctly
      */
     private boolean checkQuestion2() {
-        String answer_q2 = editText_q2_.getText().toString();
-        return answer_q2.equalsIgnoreCase("muggle");
+        String answerQ2 = mEditTextQ2.getText().toString();
+        return answerQ2.equalsIgnoreCase("muggle");
     }
 
     /**
@@ -94,11 +100,11 @@ public class MainActivity extends AppCompatActivity {
      * @return whether question was anwered correctly
      */
     private boolean checkQuestion3() {
-        if (checkBox_q3_incendio_.isChecked()) {
+        if (mCheckBoxQ3Incendio.isChecked()) {
             return false;
         }
-        return (checkBox_q3_crucio_.isChecked() && checkBox_q3_imperio_.isChecked()) &&
-                checkBox_q3_avadakedavra_.isChecked();
+        return (mCheckBoxQ3Crucio.isChecked() && mCheckBoxQ3Imperio.isChecked()) &&
+                mCheckBoxQ3Avadakedavra.isChecked();
     }
 
     /**
@@ -107,10 +113,10 @@ public class MainActivity extends AppCompatActivity {
      * @return whether question was anwered correctly
      */
     private boolean checkQuestion4() {
-        if (radio_button_q4_snape_.isChecked()) {
+        if (mRadioButtonQ4Snape.isChecked()) {
             return false;
         }
-        return radio_button_q4_mcgonagall_.isChecked();
+        return mRadioButtonQ4Mcgonagall.isChecked();
     }
 
     /**

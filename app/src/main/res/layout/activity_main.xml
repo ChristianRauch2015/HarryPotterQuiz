@@ -22,13 +22,13 @@
             android:src="@drawable/background" />
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <EditText
-                android:id="@+id/editText_username"
+                android:id="@+id/edit_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/textView"
@@ -63,14 +63,14 @@
                     android:orientation="vertical" >
 
                     <CheckBox
-                        android:id="@+id/checkBox_q1_henry"
+                        android:id="@+id/check_q1_henry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/checkbox_left"
                         android:text="@string/answer_q1_henry" />
 
                     <CheckBox
-                        android:id="@+id/checkBox_q1_james"
+                        android:id="@+id/check_q1_james"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/checkbox_left"
@@ -84,14 +84,14 @@
                     android:orientation="vertical" >
 
                     <CheckBox
-                        android:id="@+id/checkBox_q1_lily"
+                        android:id="@+id/check_q1_lily"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/checkbox_right"
                         android:text="@string/answer_q1_lily" />
 
                     <CheckBox
-                        android:id="@+id/checkBox_q1_elizabeth"
+                        android:id="@+id/check_q1_elizabeth"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/checkbox_right"
@@ -123,7 +123,7 @@
                 android:textColor="@color/colorBlack" />
 
             <EditText
-                android:id="@+id/editText_q2"
+                android:id="@+id/edit_q2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/textEdit"
@@ -162,14 +162,14 @@
                     android:orientation="vertical" >
 
                     <CheckBox
-                        android:id="@+id/checkBox_q3_incendio"
+                        android:id="@+id/check_q3_incendio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/checkbox_left"
                         android:text="@string/answer_q3_incendio" />
 
                     <CheckBox
-                        android:id="@+id/checkBox_q3_avadakedavra"
+                        android:id="@+id/check_q3_avadakedavra"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/checkbox_left"
@@ -183,14 +183,14 @@
                     android:orientation="vertical" >
 
                     <CheckBox
-                        android:id="@+id/checkBox_q3_imperio"
+                        android:id="@+id/check_q3_imperio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/checkbox_right"
                         android:text="@string/answer_q3_imperio" />
 
                     <CheckBox
-                        android:id="@+id/checkBox_q3_crucio"
+                        android:id="@+id/check_q3_crucio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/checkbox_right"
@@ -226,13 +226,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <RadioButton
-                    android:id="@+id/radio_button_q4_mcgonagall"
+                    android:id="@+id/radio_q4_mcgonagall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_q4_mcgonagall"
                     style="@style/radio_button_left" />
                 <RadioButton
-                    android:id="@+id/radio_button_q4_snape"
+                    android:id="@+id/radio_q4_snape"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_q4_snape"
@@ -250,7 +250,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/linearLayout"
+            android:layout_below="@id/linear"
             android:onClick="submit"
             android:text="@string/submit" />
 

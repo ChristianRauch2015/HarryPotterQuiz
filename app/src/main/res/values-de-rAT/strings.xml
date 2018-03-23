@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Harry Potter Quiz</string>
+    <string name="user_name">Ihr Name</string>
+    <string name="answer_q2">Ihre Antwort</string>
+    <string name="submit">Einreichen</string>
+    <string name="header_question1">Frage 1</string>
+    <string name="header_question2">Frage 2</string>
+    <string name="header_question3">Frage 3</string>
+    <string name="header_question4">Frage 4</string>
+    <string name="question1">Wie lauten die Vornamen von Harry Potters Eltern?</string>
+    <string name="question2">Wie nennt man eine Person, die keine Zauberkräfte besitzt?</string>
+    <string name="question3">Was sind die drei unvergebaren Flüche?</string>
+    <string name="question4">Welcher dieser Professoren von Hogwarts lehrt Verwandlung?</string>
+    <string name="answer_q1_henry">Henry</string>
+    <string name="answer_q1_james">James</string>
+    <string name="answer_q1_lily">Lily</string>
+    <string name="answer_q1_elizabeth">Elizabeth</string>
+    <string name="answer_q2_">muggle</string>
+    <string name="answer_q3_incendio">Incendio</string>
+    <string name="answer_q3_avadakedavra">Avada Kedavra</string>
+    <string name="answer_q3_imperio">Imperio</string>
+    <string name="answer_q3_crucio">Crucio</string>
+    <string name="answer_q4_mcgonagall">McGonagall</string>
+    <string name="answer_q4_snape">Snape</string>
+    <string name="result">%1$s, Sie machten sich gut an %2$d von %3$d Fragen. %4$s</string>
+</resources>
